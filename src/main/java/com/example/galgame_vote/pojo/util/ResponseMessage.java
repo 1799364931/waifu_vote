@@ -1,4 +1,4 @@
-package com.example.galgame_vote.pojo;
+package com.example.galgame_vote.pojo.util;
 
 import lombok.Data;
 import org.springframework.http.HttpStatus;
@@ -9,7 +9,7 @@ public class ResponseMessage<T> {
     private Integer code;
     private String message;
     private T data;
-    
+
     public ResponseMessage(Integer code, String message, T data) {
         this.code = code;
         this.message = message;

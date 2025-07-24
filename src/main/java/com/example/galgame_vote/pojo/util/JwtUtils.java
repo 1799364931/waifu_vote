@@ -1,5 +1,6 @@
-package com.example.galgame_vote.pojo;
+package com.example.galgame_vote.pojo.util;
 
+import com.example.galgame_vote.pojo.User;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.stereotype.Component;

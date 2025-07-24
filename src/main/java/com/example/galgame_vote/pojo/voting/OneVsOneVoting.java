@@ -1,4 +1,4 @@
-package com.example.galgame_vote.pojo;
+package com.example.galgame_vote.pojo.voting;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Future;
@@ -7,7 +7,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.sql.Timestamp;
-import java.util.List;
 import java.util.UUID;
 
 @Entity

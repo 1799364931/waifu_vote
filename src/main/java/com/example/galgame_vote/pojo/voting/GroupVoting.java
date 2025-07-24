@@ -1,11 +1,10 @@
-package com.example.galgame_vote.pojo;
+package com.example.galgame_vote.pojo.voting;
 
+import com.example.galgame_vote.pojo.VotingList;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Future;
 import jakarta.validation.constraints.Min;
-import lombok.Getter;
-import lombok.Setter;
-import org.hibernate.annotations.Check;
+import lombok.*;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -14,7 +13,10 @@ import java.util.UUID;
 @Entity
 @Getter
 @Setter
+@Builder
 @Table(name = "tb_group_voting")
+@NoArgsConstructor
+@AllArgsConstructor
 public class GroupVoting {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -36,9 +38,12 @@ public class GroupVoting {
 
     @Column(name = "max_voting_count")
     @Min(0)
-    private Integer count;
+    private Integer maxVotingCount;
 
     @OneToMany(mappedBy = "groupVoting")
     private List<VotingOption> votingOptionList;
 
+    @ManyToOne
+    @JoinColumn(name = "voting_list_id", nullable = true)
+    private VotingList votingList; // 投票列表ID
 }

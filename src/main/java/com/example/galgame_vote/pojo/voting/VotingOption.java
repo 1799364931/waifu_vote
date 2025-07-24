@@ -1,6 +1,7 @@
-package com.example.galgame_vote.pojo;
+package com.example.galgame_vote.pojo.voting;
 
 
+import com.example.galgame_vote.pojo.voting.GroupVoting;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Min;
 import lombok.Getter;
